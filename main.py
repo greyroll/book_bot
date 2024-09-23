@@ -70,7 +70,6 @@ async def open_book(message: Message, state: FSMContext):
 		else:
 			logger.info(f"User {message.from_user.id} has opened book #{index}.")
 			book_loader.set_path(chosen_book_path)
-			store
 			await message.answer("Пожалуйста, укажите количество символов, которое вы хотите отображать за раз.")
 			await state.set_state(UserStatus.picking_symbols)
 
