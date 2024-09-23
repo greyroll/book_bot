@@ -1,14 +1,17 @@
 class BookLoader:
-	def __init__(self, path: str):
-		self.path = path
+	def __init__(self):
+		self.__path = ""
+
+	def set_path(self, path: str):
+		self.__path = path
 
 	def read(self):
-		with open(self.path, "r") as file:
+		with open(self.__path, "r") as file:
 			return file.read()
 
-	def split_into_500_sb(self):
+	def split_into_given_sb(self, number: int):
 		whole_text = self.read()
-		split_text = [whole_text[i:i + 500] for i in range(0, len(whole_text), 500)]
+		split_text = [whole_text[i:i + number] for i in range(0, len(whole_text), number)]
 		return split_text
 
 

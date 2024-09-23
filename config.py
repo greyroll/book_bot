@@ -12,7 +12,7 @@ books_data = [
 	}, {
 		"index": 3,
 		"name": "«Несвятые святые» и другие рассказы",
-		"author": "Архимандрит Тихон ",
+		"author": "Архимандрит Тихон",
 		"path": "books_txt/Shevkunov.txt"
 	}
 ]
